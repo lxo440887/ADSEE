@@ -396,8 +396,8 @@ const watchAddBtn = document.querySelector('#watchAddBtn');
 const $watchCount = document
   .querySelector('.earn__item__watch-count')
   .querySelector('span');
-const maxAdsPerDay = 10;
-const currentDate = new Date().toISOString().slice(0, 10);
+const maxAdsPerDay = 20;
+const currentDate = new Date().toISOString().slice(0, 20);
 
 function updateWatchCount() {
   const adData = getAdData();
@@ -437,9 +437,9 @@ watchAddBtn.addEventListener('click', async () => {
       //disable and countdown
       setTimeout(function () {
         watchAddBtn.disabled = null;
-      }, 8000);
+      }, 10000);
 
-      var countdownNum = 8;
+      var countdownNum = 10;
       incTimer();
 
       function incTimer() {
@@ -447,7 +447,7 @@ watchAddBtn.addEventListener('click', async () => {
         setTimeout(function () {
           if (countdownNum != 0) {
             countdownNum--;
-            watchAddBtn.innerHTML = `00:${(countdownNum >= 10) ? countdownNum : `${"0" + countdownNum}`}`;
+            watchAddBtn.innerHTML = `00:${(countdownNum >= 20) ? countdownNum : `${"0" + countdownNum}`}`;
             incTimer();
           } else {
             watchAddBtn.innerHTML = `<span>Watch</span> <img src="./img/see.png" alt="">`;
