@@ -383,7 +383,7 @@ acc2.addEventListener("click", function () {
 
 
 //ADSGRAM INTEGRATION ///////////////////////////////////////////////
-const adsgram_blockId = '3260';
+const adsgram_blockId = '5320';
 const adsgramReward = 200;
 
 const AdController = window.Adsgram.init({ blockId: adsgram_blockId });
