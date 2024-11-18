@@ -437,9 +437,9 @@ watchAddBtn.addEventListener('click', async () => {
       //disable and countdown
       setTimeout(function () {
         watchAddBtn.disabled = null;
-      }, 30000);
+      }, 5000);
 
-      var countdownNum = 30;
+      var countdownNum = 5;
       incTimer();
 
       function incTimer() {
